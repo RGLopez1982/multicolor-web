@@ -1508,22 +1508,55 @@ a[href*="elfsight.com"],
 }
 
 @media (max-width: 768px) {
+    .header {
+        height: 70px;
+    }
+
     .header-container {
         padding: 0 1rem;
+    }
+    
+    .brand-logo-img {
+        height: 48px;
     }
     
     .nav-menu {
         display: none;
     }
     
+    .hero-section {
+        margin-top: 70px;
+    }
+    
+    #hero-section {
+        scroll-margin-top: 70px;
+    }
+    
+    main > section {
+        padding: 3.5rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
     .rubros-grid, .promos-grid-offers, .financing-grid, .insta-grid, .sucursales-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .financing-subheader {
+        margin-top: 3rem;
+        padding-top: 2.5rem;
     }
     
     .financing-subheader h3 {
         font-size: 1.4rem;
     }
-
 
     .hero-title {
         font-size: 2.25rem;
@@ -1532,6 +1565,7 @@ a[href*="elfsight.com"],
     .hero-actions {
         flex-direction: column;
         width: 100%;
+        gap: 0.75rem;
     }
     
     .btn-hero {
@@ -1544,21 +1578,38 @@ a[href*="elfsight.com"],
     
     .hero-card {
         width: 100%;
+        max-width: 340px;
     }
 
     .calculator-tabs-bar {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        grid-template-columns: none;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .calculator-tabs-bar::-webkit-scrollbar {
+        display: none;
     }
 
     .calc-tab-btn {
-        border-bottom: none;
-        border-left: 3px solid transparent;
-        padding: 0.9rem 1rem;
-        justify-content: flex-start;
+        flex: 0 0 auto;
+        border-bottom: 3px solid transparent;
+        border-left: none;
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
     }
 
     .calc-tab-btn.active {
-        border-left-color: var(--color-purple);
+        border-bottom-color: var(--color-purple);
+        border-left-color: transparent;
+        background-color: var(--bg-secondary);
+    }
+    
+    .calc-panel {
+        padding: 1.5rem 1.25rem;
     }
     
     .dimensions-inputs {
@@ -1572,11 +1623,114 @@ a[href*="elfsight.com"],
     .branch-selector-row {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .brands-slider-container::before,
+    .brands-slider-container::after {
+        width: 40px;
     }
     
     .footer-container {
         flex-direction: column;
-        gap: 1.5rem;
+        align-items: center;
         text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-catalog-text-desktop {
+        display: none;
+    }
+    
+    .btn-catalog {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .toast-container {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1.5rem;
+    }
+    
+    .toast {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .sucursal-info {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .sucursal-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .sucursal-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 60px;
+    }
+    
+    .brand-logo-img {
+        height: 38px;
+    }
+    
+    .hero-section {
+        margin-top: 60px;
+    }
+    
+    #hero-section {
+        scroll-margin-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: 1.85rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-visual {
+        height: 280px;
+    }
+    
+    .hero-card {
+        padding: 1.25rem;
+    }
+    
+    .results-table-header, .material-row {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        padding: 0.75rem 0.5rem;
+        font-size: 0.78rem;
+    }
+    
+    .suggested-badge {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
     }
 }
